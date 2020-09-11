@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './Unchanged/footer/footer.component';
+import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { SlideComponent } from './COMPONENT/CHANGE/slide/slide.component';
 import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
@@ -17,9 +17,7 @@ import { DetailComponent } from './COMPONENT/CHANGE/product/detail/detail.compon
     HeaderComponent,
     SlideComponent,
     HomeComponent,
-    ProductComponent,
     CategoriesComponent,
-    DetailComponent
   ],
   imports: [
     BrowserModule
