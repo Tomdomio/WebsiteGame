@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WebGame"
+    }
+  },
+  "defaultProject": "WebGame",
+  "cli": {
+    "analytics": "2dab0e2c-068a-4b6b-b50a-a177662048fd"
+  }
 }
