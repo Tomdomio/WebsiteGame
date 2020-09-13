@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+// import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
-import { ProductComponent } from './COMPONENT/CHANGE/product/product.component';
-import { CategoriesComponent } from './COMPONENT/CHANGE/categories/categories.component';
-import { DetailComponent } from './COMPONENT/CHANGE/product/detail/detail.component';
+import { NaptheComponent } from './menu/napthe/napthe.component';
+import { BaivietComponent } from './menu/baiviet/baiviet.component';
+import { LichsuComponent } from './menu/lichsu/lichsu.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { DetailComponent } from './COMPONENT/CHANGE/product/detail/detail.compon
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    CategoriesComponent,
+    NaptheComponent,
+    BaivietComponent,
+    LichsuComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
