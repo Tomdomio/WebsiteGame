@@ -7,6 +7,8 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
 import { HuongdanthueComponent } from './COMPONENT/UNCHANGED/MENU/huongdanthue/huongdanthue.component';
 import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.component';
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
+import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
+import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
 
 
 const routesConfig: Routes = [
@@ -16,6 +18,8 @@ const routesConfig: Routes = [
   {path:'huongdanthue', component: HuongdanthueComponent},
   {path:'baiviet', component: BaivietComponent},
   {path:'lichsu', component: LichsuComponent},
+  {path:'login', component: LoginComponent},
+  {path:'register', component: RegisterComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
 
