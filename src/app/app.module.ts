@@ -10,6 +10,8 @@ import { NaptheComponent } from './COMPONENT/UNCHANGED/MENU/napthe/napthe.compon
 import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.component';
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
+import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 
 
 @NgModule({
@@ -18,15 +20,17 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    NaptheComponent,
-    BaivietComponent,
     LichsuComponent,
+    BaivietComponent,
+    NaptheComponent,
     HuongdanthueComponent,
     PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 
 
-const routes: Routes = [
+const routesConfig: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path:'napthe', component: NaptheComponent},
@@ -21,11 +21,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [
-
+  imports:[
     CommonModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routesConfig)
   ],
   exports: [RouterModule]
 })
