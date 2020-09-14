@@ -8,7 +8,6 @@ import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -9,10 +9,12 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { UCPubgComponent } from './COMPONENT/CHANGE/home/dichvu/ucpubg/ucpubg.component';
 
 
 const routesConfig: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+//Menu
   {path:'home', component: HomeComponent},
   {path:'napthe', component: NaptheComponent},
   {path:'huongdanthue', component: HuongdanthueComponent},
@@ -20,6 +22,8 @@ const routesConfig: Routes = [
   {path:'lichsu', component: LichsuComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
+//Dịch Vụ
+  {path:'ucpubg', component: UCPubgComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
 
