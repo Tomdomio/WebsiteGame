@@ -6,6 +6,7 @@ import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
+import { CategoriesComponent } from './COMPONENT/CHANGE/categories/categories.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+    CategoriesComponent,
     PageNotFoundComponent,
   ],
   imports: [

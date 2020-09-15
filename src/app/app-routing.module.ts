@@ -10,6 +10,7 @@ import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.compon
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
 import { UCPubgComponent } from './COMPONENT/CHANGE/home/dichvu/ucpubg/ucpubg.component';
+import { ProductComponent } from './COMPONENT/CHANGE/product/product.component';
 
 
 const routesConfig: Routes = [
@@ -22,9 +23,12 @@ const routesConfig: Routes = [
   {path:'lichsu', component: LichsuComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
+//Cate
+  {path:'product', component: ProductComponent},
 //Dịch Vụ
   {path:'ucpubg', component: UCPubgComponent},
-  {path:'**', component: PageNotFoundComponent}
+  {path:'**', component: PageNotFoundComponent},
+
 ];
 
 @NgModule({
