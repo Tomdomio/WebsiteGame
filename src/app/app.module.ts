@@ -6,7 +6,7 @@ import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
-import { CategoriesComponent } from './COMPONENT/CHANGE/categories/categories.component';
+import { DetailComponent } from './COMPONENT/CHANGE/product/detail/detail.component';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { CategoriesComponent } from './COMPONENT/CHANGE/categories/categories.co
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    CategoriesComponent,
+    DetailComponent,
     PageNotFoundComponent,
   ],
   imports: [

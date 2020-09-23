@@ -11,6 +11,7 @@ import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
 import { UCPubgComponent } from './COMPONENT/CHANGE/home/dichvu/ucpubg/ucpubg.component';
 import { ProductComponent } from './COMPONENT/CHANGE/product/product.component';
+import { DetailComponent } from './COMPONENT/CHANGE/product/detail/detail.component';
 
 
 const routesConfig: Routes = [
@@ -25,6 +26,7 @@ const routesConfig: Routes = [
   {path:'register', component: RegisterComponent},
 //Cate
   {path:'product', component: ProductComponent},
+  {path:'detail', component: DetailComponent},
 //Dịch Vụ
   {path:'ucpubg', component: UCPubgComponent},
   {path:'**', component: PageNotFoundComponent},
