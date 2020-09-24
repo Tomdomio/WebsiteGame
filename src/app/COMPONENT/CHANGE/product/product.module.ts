@@ -7,16 +7,17 @@ import { ProductComponent } from './product.component';
 
 const routesConfig: Routes = [
   {path:'detail', component: DetailComponent},
+  {path:'product', component: ProductComponent}
 ];
 
 @NgModule({
   declarations: [
+    DetailComponent,
     ProductComponent,
-    DetailComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routesConfig),
+    RouterModule.forChild(routesConfig),
   ],
 })
 export class ProductModule { }

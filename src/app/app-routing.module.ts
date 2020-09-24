@@ -9,12 +9,14 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
 
 
 const routesConfig: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path:'home', component: HomeComponent},
 //Menu
-  {path:'', loadChildren:() => import('./COMPONENT/CHANGE/home/home.module').then(m => m.HomeModule)},
+  {path:'home', loadChildren:() => import('./COMPONENT/CHANGE/home/home.module').then(m => m.HomeModule)},
   {path:'napthe', component: NaptheComponent},
   {path:'huongdanthue', component: HuongdanthueComponent},
   {path:'baiviet', component: BaivietComponent},
@@ -32,8 +34,7 @@ const routesConfig: Routes = [
   declarations: [],
   imports:[
     CommonModule,
-    RouterModule.forRoot(routesConfig)
-  ],
+    RouterModule.forRoot(routesConfig)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
