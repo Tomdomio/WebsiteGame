@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
+import { ProductModule } from './COMPONENT/CHANGE/product/product.module';
+import { HomeModule } from './COMPONENT/CHANGE/home/home.module';
+
 import { NaptheComponent } from './COMPONENT/UNCHANGED/MENU/napthe/napthe.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
 import { HuongdanthueComponent } from './COMPONENT/UNCHANGED/MENU/huongdanthue/huongdanthue.component';
@@ -9,12 +12,9 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
-import { HomeComponent } from './COMPONENT/CHANGE/home/home.component';
 
 
 const routesConfig: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path:'home', component: HomeComponent},
 //Menu
   {path:'home', loadChildren:() => import('./COMPONENT/CHANGE/home/home.module').then(m => m.HomeModule)},
   {path:'napthe', component: NaptheComponent},
@@ -33,6 +33,8 @@ const routesConfig: Routes = [
 @NgModule({
   declarations: [],
   imports:[
+    HomeModule,
+    ProductModule,
     CommonModule,
     RouterModule.forRoot(routesConfig)],
   exports: [RouterModule]

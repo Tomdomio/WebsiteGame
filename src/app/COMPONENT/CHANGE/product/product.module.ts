@@ -6,14 +6,14 @@ import { DetailComponent } from './detail/detail.component';
 import { ProductComponent } from './product.component';
 
 const routesConfig: Routes = [
-  {path:'detail', component: DetailComponent},
-  {path:'product', component: ProductComponent}
+  { path:'product', component: ProductComponent },
+  { path:'detail', component: DetailComponent },
 ];
 
 @NgModule({
   declarations: [
-    DetailComponent,
     ProductComponent,
+    DetailComponent,
   ],
   imports: [
     CommonModule,
