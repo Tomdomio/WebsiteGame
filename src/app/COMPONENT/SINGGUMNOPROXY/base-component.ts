@@ -1,4 +1,4 @@
-import { CategoriesComponent} from './COMPONENT/CHANGE/home/home.component';
+import { HomeComponent} from './COMPONENT/CHANGE/home/home.component';
 import { Injector, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { of as observableOf, Subject } from 'rxjs';
