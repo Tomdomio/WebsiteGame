@@ -1,15 +1,12 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { BaseComponent } from '../../SINGGUMNOPROXY/base-component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent extends BaseComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
-  constructor( injector: Injector) {
-    super(injector);
-   }
+  constructor() {}
   ngOnInit(): void {
   }
 
