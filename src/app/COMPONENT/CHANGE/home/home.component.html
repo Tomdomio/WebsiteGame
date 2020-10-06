@@ -61,6 +61,7 @@
 					<div class="c-line-center c-theme-bg"></div>
 				</div>
 				<div class="row row-flex-safari game-list">
+					<ng-container *ngFor="let game of menus">
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
@@ -69,7 +70,7 @@
 							</div>
 							<div class="news_title">
 								<h2>
-									<a routerLink="/home/product">Pubg Mobile</a>
+									<a routerLink="/home/product">{{game.tenTheLoai}}</a>
 								</h2>
 							</div>
 							<div class="news_description">
@@ -91,7 +92,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
+				</ng-container>
+					<!-- <div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
 								<a href="#" class=""><img src="assets/assets/images/LQMB.gif"></a>
@@ -289,7 +291,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!--quay vong vong-->
 				</div>
 				<!-- End-->

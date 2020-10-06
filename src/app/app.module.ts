@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,7 +19,7 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
