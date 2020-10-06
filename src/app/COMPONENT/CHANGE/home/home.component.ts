@@ -10,7 +10,7 @@ import 'rxjs/add/operator/takeUntil';
 export class HomeComponent extends BaseComponent implements OnInit {
 
   menus:any;
-  total:any;
+  
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -18,9 +18,6 @@ export class HomeComponent extends BaseComponent implements OnInit {
     this._api.get('api/Loai/get-loai').takeUntil(this.unsubscribe).subscribe(res => {
       this.menus = res;
     }); 
-    // this._cart.items.subscribe((res) => {
-    //   this.total = res? res.length:0;
-    // });
   }
 
 }

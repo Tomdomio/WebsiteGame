@@ -33,9 +33,9 @@ const routesConfig: Routes = [
 @NgModule({
   declarations: [],
   imports:[
+    CommonModule,
     HomeModule,
     ProductModule,
-    CommonModule,
     RouterModule.forRoot(routesConfig)],
   exports: [RouterModule]
 })

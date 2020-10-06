@@ -20,4 +20,4 @@ const routesConfig: Routes = [
     RouterModule.forChild(routesConfig),
   ],
 })
-export class ProductModule { }
+export class ProductModule {}

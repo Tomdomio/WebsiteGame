@@ -61,7 +61,7 @@
 					<div class="c-line-center c-theme-bg"></div>
 				</div>
 				<div class="row row-flex-safari game-list">
-					<ng-container *ngFor="let game of menus">
+					<ng-container *ngFor="let loai of menus">
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
@@ -70,7 +70,7 @@
 							</div>
 							<div class="news_title">
 								<h2>
-									<a routerLink="/home/product">{{game.tenTheLoai}}</a>
+									<a routerLink="/home/product">{{loai.tenTheLoai}}</a>
 								</h2>
 							</div>
 							<div class="news_description">
