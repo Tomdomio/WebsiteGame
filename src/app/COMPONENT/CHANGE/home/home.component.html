@@ -61,16 +61,16 @@
 					<div class="c-line-center c-theme-bg"></div>
 				</div>
 				<div class="row row-flex-safari game-list">
-					<ng-container *ngFor="let loai of menus">
+					<ng-container *ngFor="let loai of theloai">
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
-								<a routerLink="/product"><img src="assets/assets/images/pubgmobile.gif"></a>
+								<a routerLink="/product"><img src="assets/assets/images/{{ loai.image }}"></a>
 
 							</div>
 							<div class="news_title">
 								<h2>
-									<a routerLink="/home/product">{{loai.tenTheLoai}}</a>
+									<a routerLink="/home/product">{{ loai.tenTheLoai }}</a>
 								</h2>
 							</div>
 							<div class="news_description">
@@ -93,206 +93,6 @@
 						</div>
 					</div>
 				</ng-container>
-					<!-- <div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="#" class=""><img src="assets/assets/images/LQMB.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="#">Liên Quân Mobile</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 253
-								</p>
-								<p>
-									Đã bán: 14
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-                                <a href="#"><img src="assets/assets/images/NSO.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="#">Liên Minh Huyền Thoại</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 528
-								</p>
-								<p>
-									Đã bán: 0
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="#"><img src="assets/assets/images/freefire.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="#">Garena Free Fire</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 484
-								</p>
-								<p>
-									Đã bán: 528
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="#"><img src="assets/assets/images/HTTH.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="#">Hải Tặc Tí Hon</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 22
-								</p>
-								<p>
-									Đã bán: 0
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="#"><img src="assets/assets/images/DAR.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="#">Ninja School Online</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 154
-								</p>
-								<p>
-									Đã bán: 66
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="NRO"><img src="assets/assets/images/NRO.gif"></a>
-							</div>
-							<div class="news_title">
-								<h2>
-									<a href="NRO">Ngọc Rồng Online</a>
-								</h2>
-							</div>
-							<div class="news_description">
-								<p>
-									Số tài khoản: 0
-								</p>
-								<p>
-									Đã bán: 0
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image"><a href="#"><img src="assets//assets/images/vongquay.gif"></a></div>
-							<div class="news_title"><a href="#">Vòng Quay Trung Thu</a></div>
-							<div class="news_description">
-								<p>
-								Nick đã trúng: 8489</p>
-								<p>Người quay: 9809
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div> -->
-					<!--quay vong vong-->
 				</div>
 				<!-- End-->
 			</div>
@@ -309,12 +109,13 @@
 					<div class="c-line-center c-theme-bg"></div>
 				</div>
 				<div class="row row-flex-safari game-list">
+					<ng-container *ngFor = "let dv of dichvu">
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
-								<a href="#"><img src="assets/assets/images/pubgmobile.gif"></a>
+								<a href="#"><img src="assets/assets/images/{{ dv.image }}"></a>
 							</div>
-							<div class="news_title"><a href="/dich-vu/dich-vu-game-ninja">Dịch Vụ Game Pubg Mobile</a></div>
+							<div class="news_title"><a href="/dich-vu/dich-vu-game-ninja">{{ dv.tenDichVu }}</a></div>
 							<div class="news_description">
 								<p>
 									Dịch vụ hỗ trợ: 3
@@ -335,35 +136,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-3 col-xs-6 p-5">
-						<div class="classWithPad">
-							<div class="news_image">
-								<a href="#"><img src="assets/assets/images/LQMB.gif"></a>
-							</div>
-							<div class="news_title"><a href="#">Dịch Vụ Game Liên Quân Mobile</a></div>
-							<div class="news_description">
-								<p>
-									Dịch vụ hỗ trợ: 1
-								</p>
-								<p>
-									Giao dịch: 1
-								</p>
-							</div>
-							<div class="a-more">
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="view">
-											<a href="#">Xem tất cả</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- End-->
+				</ng-container>
 			</div>
-			<!-- End-->
+				<!-- End-->
 		</div>
+			<!-- End-->
 	</div>
+</div>
 <!-- END: PAGE CONTENT -->

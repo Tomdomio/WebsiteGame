@@ -9,14 +9,18 @@ import 'rxjs/add/operator/takeUntil';
 })
 export class HomeComponent extends BaseComponent implements OnInit {
 
-  menus:any;
+  theloai:any;
+  dichvu: any;
   
   constructor(injector: Injector) { 
     super(injector);
   }
   ngOnInit(): void {
     this._api.get('api/Loai/get-loai').takeUntil(this.unsubscribe).subscribe(res => {
-      this.menus = res;
+      this.theloai = res;
+    this._api.get('api/DichVu/get-dv').takeUntil(this.unsubscribe).subscribe(res => {
+      this.dichvu = res; 
+    })
     }); 
   }
 
