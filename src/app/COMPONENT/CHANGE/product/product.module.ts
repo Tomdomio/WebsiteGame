@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DetailComponent } from './detail/detail.component';
 import { ProductComponent } from './product.component';
+import { DetailComponent } from './detail/detail.component';
+
 
 const routesConfig: Routes = [
   {path:'product/:id',component:ProductComponent},
@@ -14,7 +15,7 @@ const routesConfig: Routes = [
 @NgModule({
   declarations: [
     ProductComponent,
-    DetailComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,

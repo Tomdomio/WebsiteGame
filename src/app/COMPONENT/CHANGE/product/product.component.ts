@@ -21,9 +21,7 @@ export class ProductComponent extends BaseComponent implements OnInit {
     this._route.params.subscribe(params => {
       let id = params['id'];
       this._api.get('api/SanPham/get-by-loai/'+id).takeUntil(this.unsubscribe).subscribe(res => {
-        this.sanpham = res;
-        setTimeout(() => {
-          this.loadScripts();
+        this.sanpham = res; setTimeout(() => { this.loadScripts();
         });
       }); 
     });

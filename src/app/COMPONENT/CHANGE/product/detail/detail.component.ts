@@ -6,7 +6,7 @@ import { BaseComponent } from '../../../SINGGUMNOPROXY/base-component';
   templateUrl: './detail.component.html',
 })
 export class DetailComponent extends BaseComponent implements OnInit {
-    
+  DetailComponent
       detail: any;
 
   constructor(injector: Injector) {
@@ -14,10 +14,10 @@ export class DetailComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.detail = {};
+    this.detail = [];
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.get('/api/SanPham/get-by-id/'+id).takeUntil(this.unsubscribe).subscribe(res => { this.detail = res;
+      this._api.get('api/SanPham/get-by-id/'+id).takeUntil(this.unsubscribe).subscribe(res => { this.detail = res;
         setTimeout(() => { this.loadScripts();});
       });
     });

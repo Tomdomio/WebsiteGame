@@ -29,7 +29,7 @@
 			<div class="col-sm-6 col-md-3">
 				<div class="classWithPad">
 					<div class="image">
-						<a routerLink="/detail">
+						<a [routerLink]="['/product/detail',sp.id]">
 							<img style="width: 259px;" src="assets/images/PubgMobile/{{ sp.image }}">
 							<span class="ms">MS: {{ sp.id }}</span>
 						</a>
