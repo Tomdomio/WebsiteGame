@@ -12,6 +12,7 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { ProductComponent } from './COMPONENT/CHANGE/product/product.component';
 
 
 const routesConfig: Routes = [

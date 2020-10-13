@@ -2,6 +2,7 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from '../../SINGGUMNOPROXY/base-component';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/takeUntil';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -16,7 +17,17 @@ export class ProductComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._api.get('api/SanPham/get-sanpham').takeUntil(this.unsubscribe).subscribe(res =>{this.sanpham = res;});
-  }
+    this.sanpham = [];
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('api/SanPham/get-by-loai/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.sanpham = res;
+        setTimeout(() => {
+          this.loadScripts();
+        });
+      }); 
+    });
 
+  }
 }
+
