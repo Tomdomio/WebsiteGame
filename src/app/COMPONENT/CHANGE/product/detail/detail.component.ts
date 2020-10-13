@@ -1,5 +1,8 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from '../../../SINGGUMNOPROXY/base-component';
+import 'rxjs/add/observable/combineLatest';
+import 'rxjs/add/operator/takeUntil';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detail',

@@ -1,1 +1,130 @@
-<p>{{ detail.id }}</p>
+<div class="c-content-box c-size-lg c-overflow-hide c-bg-white" style="margin-top: 70px;">
+    <div class="container">
+        <div class="c-shop-product-details-4">
+            <div class="row">
+                <div class="col-md-4 m-b-20">
+                <div class="c-product-header">
+                    <!-- {{-- <h4 class="c-font-uppercase c-font-bold">Liên minh huyền thoại - Việt Nam</h4> --}} -->
+                    <div class="c-content-title-1">
+                        <h3 class="c-font-uppercase c-font-bold color-red">#Tài Khoản: {{ detail.id }}</h3>
+                        <h2 class="c-font-uppercase c-font-bold">#Mục: {{ detail.tenTheLoai }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 visible-sm visible-xs visible-sm">
+                <div class="text-center m-t-20">
+                    <img class="img-relqonsive img-thumbnail" src=" source/images/NSO/fPLeKbwarL_1583588570.jpg"/>
+                </div>
+                <div class="c-product-meta">
+                    <div class="c-content-divider">
+                        <i class="fa fa-dot"></i>
+                    </div>
+                    <div class="c-content-divider">
+                        <i class="fa fa-dot"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="c-product-meta">
+                    <div class="c-product-price c-theme-font" style="float: none;text-align: center">
+                    </div>
+                    <div style="display: none">
+                        <div class="position0">
+                            {{ detail.giaban | currency: "VND" }} - CARD
+                        </div>
+                        <div class="position1">
+                            {{ detail.giaban | currency: "VND" }} - ATM
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(".c-product-price").append($(".position0"));
+                        $(".c-product-price").append($(".position1"));
+                    </script>
+                </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <div class="c-product-header">
+                    <div class="c-content-title-1">
+                            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="login">Mua ngay</a>
+                        <a class="btn c-btn btn-lg btn-danger c-font-uppercase c-font-bold c-btn-square m-t-20" href="trangchu">Trang chủ</a>
+                            <a class="btn c-btn btn-lg c-bg-green-4 c-font-white c-font-uppercase c-font-bold c-btn-square m-t-20" href="napthe">Nạp thẻ cào</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-product-meta visible-md visible-lg">
+            <div class="c-content-divider">
+                <i class="fa fa-dot"></i>
+            </div>
+            <div class="row" style="margin-left: 20px;">
+                <div class="col-sm-3 col-xs-1 c-product-variant">
+                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Tên Nhân Vật:  
+                    <span class="c-font-red"> {{ detail.tenNV }} </span></p>
+                </div>
+                <div class="col-sm-3 col-xs-1 c-product-variant">
+                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Bậc Rank:  
+                     <span class="c-font-red"> {{ detail.rank }} </span></p>
+                </div>
+                <div class="col-sm-3 col-xs-1 c-product-variant">
+                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Tổng Skin:  <span class="c-font-red"> {{ detail.skin }} Skin</span></p>
+                </div>
+                <div class="col-sm-3 col-xs-1 c-product-variant">
+                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Tài Khoản:  <span class="c-font-red"> {{ detail.account }} </span></p>
+                </div>
+            </div>
+            <div class="c-content-divider">
+                <i class="fa fa-dot"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container m-t-20 content_post">
+    <p>
+        <img src="" class="zoom">
+    </p>
+    <div class="buy-footer" style="text-align: center">
+            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="login">Mua ngay</a>
+            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="">Mua ngay</a>
+    </div>
+</div>
+<div class="container m-t-20 ">
+    <div class="game-item-view" style="margin-top: 40px">
+        <div class="c-content-title-1">
+            <h3 class="c-center c-font-uppercase c-font-bold">Tài khoản khác</h3>
+            <div class="c-line-center c-theme-bg"></div>
+        </div>
+        <div class="row row-flex  item-list">
+            <!-- in sp -->
+            <div class="col-sm-6 col-md-3">
+                <div class="classWithPad">
+                    <div class="image">
+                        <a href="chitietgame">
+                            <img src="Upload/TEAMOBI">
+                            <span class="ms">MS: id</span>
+                        </a>
+                    </div>
+                    <div class="description">
+                    Tên Nv: <b>TenNV</b>
+                    </div>
+                    <div class="attribute_info">
+                        <div class="row">
+                            <div class="col-xs-6 a_att">
+                            Phái: <b>Phai</b>
+                            </div>
+                            <div class="col-xs-6 a_att">
+                            Cấp độ: <b>CapDo</b>
+                            </div>
+                            <div class="col-xs-6 a_att">
+                            Sever: <b>Sever</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="tab-vertical tutorial_area">
+        <div class="panel-group" id="accordion">
+        </div>
+    </div>
+</div>
