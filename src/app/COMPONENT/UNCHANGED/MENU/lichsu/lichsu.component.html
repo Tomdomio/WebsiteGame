@@ -65,24 +65,26 @@
         </tr>
     </thead>
         <tbody>
+            <ng-container *ngFor = "let ls of lichsu">
             <tr>
-                <td></td>
-                <td></td>
+                <td>{{ lichsu.id }}</td>
+                <td>{{ lichsu.idUser }}</td>
                 <td>
-                    <span class="label label-success"></span>
+                    <span class="label label-success">{{ ls.taiKhoan}}</span>
                 </td>
                 <td>
-                    <span class="label label-success"></span>
+                    <span class="label label-success">{{ ls.matKhau }}</span>
                     </td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ ls.tenTheLoai }}</td>
+                <td>{{ ls.tenNV }}</td>
+                <td>{{ ls.giaBan }}</td>
                 <td>
-                    <span class="c-font-bold text-success"> Ok</span>
+                    <span class="c-font-bold text-success">{{ ls.trangThai }}</span> 
                 </td>
             </tr>
-        </tbody>
-    </table>
+        </ng-container>
+    </tbody>
+</table>
     <!-- END: PAGE CONTENT -->
     <div class="data_paginate paging_bootstrap paginations_custom" style="text-align: center">
     </div>
