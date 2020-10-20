@@ -16,7 +16,7 @@ export class HomeComponent extends BaseComponent implements OnInit {
     super(injector);
   }
   ngOnInit(): void {
-    this._api.get('api/Loai/get-loai').takeUntil(this.unsubscribe).subscribe(res => {
+    this._api.get('api/TheLoai/get-theloai').takeUntil(this.unsubscribe).subscribe(res => {
       this.theloai = res;
     this._api.get('api/DichVu/get-dv').takeUntil(this.unsubscribe).subscribe(res => {
       this.dichvu = res; 
