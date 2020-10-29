@@ -48,18 +48,18 @@
                 <div class="c-line-left"></div>
             </div>
             <p style="text-align: center;color: red">*Chú ý: Nạp thẻ sai mệnh giá mất 100% giá trị thẻ</p>
-            <form method="POST" action="" accept-charset="UTF-8" class="form-horizontal form-charge"><input name="_token" type="hidden" value="eRVSIGY6I1tQEuSqJEDKk3vqOJuWtXWRiDvf81p4">
+            <form formGroup="naptheForm" (ngSubmit)="onSubmit(naptheForm.value)" class="form-horizontal form-charge">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Tài khoản:</label>
                     <div class="col-md-6">
                         <input class="form-control  c-square c-theme" type="text"
-                        value="hades150399" readonly>
+                            formControlName = "taikhoan">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Loại thẻ:</label>
+                    <label class="col-md-3 control-label">Nhà Mạng:</label>
                     <div class="col-md-6">
-                        <select class="form-control  c-square c-theme" name="type" id="type">
+                        <select class="form-control  c-square c-theme" formControlName="nhamang">
                             <option value="VIETTEL">VIETTEL</option>
                             <option value="VINAPHONE">VINAPHONE</option>
                             <option value="MOBIFONE">MOBIFONE</option>
@@ -69,7 +69,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Mệnh giá:</label>
                     <div class="col-md-6">
-                        <select class="form-control  c-square c-theme" name="amount" id="amount" required>
+                        <select class="form-control  c-square c-theme" formControlName="menhgia" required>
                             <option value="">-- Chọn mệnh giá --</option>
                             <option  value="50000">20,000 VNĐ</option>
                             <option  value="50000">50,000 VNĐ</option>
@@ -82,22 +82,21 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label">Mã số thẻ:</label>
                         <div class="col-md-6">
-                            <input class="form-control  c-square c-theme " name="pin" type="text" maxlength="16"
-                            required placeholder=""
+                            <input class="form-control  c-square c-theme " formControlName="mathe" type="text" maxlength="16"
                             required="" autofocus="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Số serial:</label>
                         <div class="col-md-6">
-                            <input class="form-control c-square c-theme " name="serial" type="text" maxlength="16"
-                            required placeholder=""
+                            <input class="form-control c-square c-theme " formControlName="soseri" type="text" maxlength="16"
                             required="">
                         </div>
                     </div>
                 <div class="form-group c-margin-t-40">
                     <div class="col-md-offset-3 col-md-6">
-                        <button type="submit" class="btn btn-submit c-theme-btn c-btn-square c-btn-uppercase c-btn-bold btn-block" data-loading-text=""><i class='fa fa-spinner fa-spin'></i>Nạp thẻ</button>
+                        <button type="submit" class="btn btn-submit c-theme-btn c-btn-square c-btn-uppercase c-btn-bold btn-block" data-loading-text="">
+                            Nạp thẻ</button>
                     </div>
                 </div>
             </form>

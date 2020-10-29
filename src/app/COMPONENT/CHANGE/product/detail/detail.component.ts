@@ -10,8 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class DetailComponent extends BaseComponent implements OnInit {
   DetailComponent
-      detail: any;
-
+  detail: any;
   constructor(injector: Injector) {
     super(injector);
   }

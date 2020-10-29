@@ -21,6 +21,7 @@ export class HomeComponent extends BaseComponent implements OnInit {
     this._api.get('api/DichVu/get-dv').takeUntil(this.unsubscribe).subscribe(res => {
       this.dichvu = res; 
     })
+    this.loadScripts();
     }); 
   }
 }
