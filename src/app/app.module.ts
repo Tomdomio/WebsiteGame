@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
 import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page-not-found.component';
+import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { NaptheComponent } from './COMPONENT/UNCHANGED/MENU/napthe/napthe.component';
+import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 
 
 @NgModule({
@@ -17,14 +20,17 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent,
+    NaptheComponent
   ],
   imports: [
     CommonModule, 
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
