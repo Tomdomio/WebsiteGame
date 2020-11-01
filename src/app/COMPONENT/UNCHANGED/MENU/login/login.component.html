@@ -5,14 +5,14 @@
     <span class="help-block" style="text-align: center;color: #dd4b39">
                 <strong></strong>
         </span>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin(loginForm.value)" novalidate>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
         <div class="form-group has-feedback infox_box">
-            <input type="text" class="form-control" formControlName="username" value="" placeholder="Tài khoản">
-            <span class="fa fa-user form-control-feedback"></span>
+            <input type="text" class="form-control" formControlName="taikhoan" value="" placeholder="Tài khoản">
+            <span class="fa fa-user-o form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback infox_box">
-            <input type="password" class="form-control" formControlName="password" placeholder="Mật khẩu">
-            <span class="fa fa-lock form-control-feedback"></span>
+            <input type="password" class="form-control" formControlName="matkhau" placeholder="Mật khẩu">
+            <span class="fa fa-unlock-alt form-control-feedback"></span>
         </div>
         <div class="row">
             <div class="col-xs-6">
@@ -34,14 +34,14 @@
         <div class="row">
             <div class="col-xs-12">
                 <button type="submit" class="btn btn-primary btn-block btn-flat" 
-                style="margin: 0 auto;">Đăng nhập</button>
+                style="margin: 0 auto;" [disabled]="loginForm.invalid || loading">Đăng nhập</button>
             </div>
             <!-- /.col -->
         </div>
     </form>
     <div class="social-auth-links text-center">
-        <p style="margin-top: 5px">- HOẶC -</p>
-        <a href="/register" class="btn  btn-social btn-google btn-flat"><i class="fa fa-key icons"></i>Tạo tài khoản</a>
+        <p style="margin-top: 5px">--- HOẶC ---</p>
+        <a routerLink="/register" class="btn btn-social btn-github btn-flat"><i class="fa fa-wifi icons"></i> Tạo tài khoản</a>
     </div>
     <!-- /.social-auth-links -->
 </div>
