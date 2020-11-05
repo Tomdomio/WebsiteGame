@@ -25,8 +25,8 @@ import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.
     NaptheComponent
   ],
   imports: [
-    CommonModule, 
     BrowserModule,
+    CommonModule, 
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

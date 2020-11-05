@@ -12,6 +12,7 @@ import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.com
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 const routesConfig: Routes = [
@@ -34,6 +35,7 @@ const routesConfig: Routes = [
   declarations: [],
   imports:[
     CommonModule,
+    BrowserModule,
     HomeModule,
     ProductModule,
     RouterModule.forRoot(routesConfig)],

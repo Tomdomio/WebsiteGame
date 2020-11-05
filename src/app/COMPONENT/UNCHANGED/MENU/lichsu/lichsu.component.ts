@@ -11,17 +11,18 @@ import { Observable } from 'rxjs';
 })
 export class LichsuComponent extends BaseComponent implements OnInit {
 
-  lichsu: any;
+  lichsutt: any;
   constructor(injector: Injector) {
     super(injector);
   }
 
   ngOnInit(): void {
-    this.lichsu = [];
+    this.lichsutt = [];
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.get('api/LichSu/get-by-idUser/'+id).takeUntil(this.unsubscribe).subscribe(res => {
-        this.lichsu = res;
+      this._api.get('api/LichSutt/get-by-idUser/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.lichsutt = res;
+        console.log(this.lichsutt);
       }); 
     });
   }

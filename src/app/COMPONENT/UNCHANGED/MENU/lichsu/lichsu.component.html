@@ -23,10 +23,10 @@
         </div>
         <div class="c-content-ver-nav m-b-20">
             <ul class="c-menu c-arrow-dot c-square c-theme">
-                <li><a href="napthe"><b>Nạp thẻ tự động</b></a></li>
-                <li><a href="lichsunap">Thẻ cào đã nạp</a></li>
-                <li><a href="dvdamua" >Dịch vụ đã mua</a></li>
-                <li><a href="lichsumuaacc" class="active">Lịch sử thuê, mua account</a></li>
+                <li><a href="/napthe"><b>Nạp thẻ tự động</b></a></li>
+                <li><a href="/lichsunap">Thẻ cào đã nạp</a></li>
+                <li><a href="/dvdamua" >Dịch vụ đã mua</a></li>
+                <li><a href="/lichsumuaacc" class="active">Lịch sử mua account</a></li>
             </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="c-layout-sidebar-content ">
     <!-- BEGIN: PAGE CONTENT -->
     <div class="c-content-title-1">
-    <h3 class="c-font-uppercase c-font-bold">Lịch sử thuê, mua account</h3>
+    <h3 class="c-font-uppercase c-font-bold">Lịch sử mua account</h3>
     <div class="c-line-left"></div>
     </div>
     <form class="form-horizontal form-find m-b-20" role="form" method="get">
@@ -65,21 +65,21 @@
         </tr>
     </thead>
         <tbody>
-            <ng-container *ngFor = "let ls of lichsu">
+            <ng-container *ngFor = "let lstt of lichsutt; let i = index">
             <tr>
-                <td>{{ lichsu.id }}</td>
-                <td>{{ lichsu.idUser }}</td>
+                <td>{{ i + 1 }}</td>
+                <td>{{ lstt.idUser }}</td>
                 <td>
-                    <span class="label label-success">{{ ls.taiKhoan}}</span>
+                    <span class="label label-success">{{ lstt.account}}</span>
                 </td>
                 <td>
-                    <span class="label label-success">{{ ls.matKhau }}</span>
+                    <span class="label label-success">{{ lstt.password }}</span>
                     </td>
-                <td>{{ ls.tenTheLoai }}</td>
-                <td>{{ ls.tenNV }}</td>
-                <td>{{ ls.giaBan }}</td>
+                <td>{{ lstt.tentheloai }}</td>
+                <td>{{ lstt.tennv }}</td>
+                <td>{{ lstt.giaban | currency: "VND" }}</td>
                 <td>
-                    <span class="c-font-bold text-success">{{ ls.trangThai }}</span> 
+                    <span class="c-font-bold text-success">{{ lstt.trangthai }}</span> 
                 </td>
             </tr>
         </ng-container>

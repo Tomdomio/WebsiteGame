@@ -40,9 +40,8 @@
             </a>
           </h1>
         </div>
-        <nav
-          class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-bold d-none hidden-xs hidden-sm">
-          <ul class="nav navbar-nav c-theme-nav">
+        <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-bold d-none hidden-xs hidden-sm">
+          <ul class="nav navbar-nav c-theme-nav" *ngIf="isLoggedIn$ | async as user">
             <li class="c-menu-type-classic">
               <a routerLink="/home" class="c-link dropdown-toggle">TRANG CHỦ</a>
             </li>
@@ -56,16 +55,32 @@
               <a routerLink="/baiviet" class="c-link dropdown-toggle">BLOGS</a>
             </li>
             <li class="c-menu-type-classic">
-              <a routerLink="/lichsu" class="c-link dropdown-toggle">LỊCH SỬ</a>
+              <a [routerLink] ="['/lichsu/',user.id]" class="c-link dropdown-toggle">LỊCH SỬ</a>
             </li>
-            <li>
+            <div *ngIf="!user; else notuser">
+            <li> 
               <a routerLink="/login" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm 
-              c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-user-o"></i> Đăng nhập</a>
+              c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-user-o"
+              ></i> Đăng Nhập</a>
             </li>
             <li>
               <a routerLink="/register" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm
-               c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-thumbs-o-down"></i> Đăng ký</a>
+               c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-thumbs-o-down" 
+               ></i> Đăng ký</a>
             </li>
+            </div>
+            <ng-template #notuser>
+              <li>
+              <a routerLink="/profile" style="cursor: pointer;" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm 
+              c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-user-o"></i>
+               {{currentUser.hoten}}  {{currentUser.sotien}}$</a>
+            </li>
+            <li>
+              <a (click)="onLogout()" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm
+               c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold"><i class="fa fa-thumbs-o-down">
+               </i> Đăng xuất</a>
+            </li>
+          </ng-template>
           </ul>
         </nav>
       </div>
