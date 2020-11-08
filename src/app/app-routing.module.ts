@@ -13,6 +13,7 @@ import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.compon
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/thedanap.component';
 
 
 const routesConfig: Routes = [
@@ -22,6 +23,7 @@ const routesConfig: Routes = [
   {path:'huongdanmua', component: HuongdanmuaComponent},
   {path:'baiviet', component: BaivietComponent},
   {path:'lichsu/:id', component: LichsuComponent},
+  {path:'thedanap/:id', component: ThedanapComponent},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
 //Product

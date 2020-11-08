@@ -5,18 +5,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product.component';
 import { DetailComponent } from './detail/detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MuaspComponent } from './muasp/muasp.component';
 
 
 const routesConfig: Routes = [
   {path:'product/:id', component:ProductComponent},
 
-  { path:'detail/:id', component: DetailComponent }
+  { path:'detail/:id', component: DetailComponent },
+
+  { path:'muasp/:id', component: MuaspComponent }
 ];
 
 @NgModule({
   declarations: [
     ProductComponent,
-    DetailComponent
+    DetailComponent,
+    MuaspComponent
   ],
   imports: [
     CommonModule,

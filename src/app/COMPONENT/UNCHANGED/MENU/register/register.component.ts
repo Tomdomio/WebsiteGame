@@ -34,6 +34,6 @@ export class RegisterComponent extends BaseComponent implements OnInit {
       } ).takeUntil(this.unsubscribe).subscribe(res => {
      alert('Tạo thành công');
       }, err => { });      
-
+      this.loading= false;
   }
 }

@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
 import { NaptheComponent } from './COMPONENT/UNCHANGED/MENU/napthe/napthe.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
+import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
+import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/thedanap.component';
 
 
 @NgModule({
@@ -20,9 +22,12 @@ import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
+    LichsuComponent,
     LoginComponent,
     RegisterComponent,
-    NaptheComponent
+    NaptheComponent,
+    ThedanapComponent,
+
   ],
   imports: [
     BrowserModule,

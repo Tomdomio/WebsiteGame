@@ -41,9 +41,10 @@
             <div class="col-md-4 text-right">
                 <div class="c-product-header">
                     <div class="c-content-title-1">
-                            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="login">Mua ngay</a>
-                        <a class="btn c-btn btn-lg btn-danger c-font-uppercase c-font-bold c-btn-square m-t-20" href="trangchu">Trang chủ</a>
-                            <a class="btn c-btn btn-lg c-bg-green-4 c-font-white c-font-uppercase c-font-bold c-btn-square m-t-20" href="napthe">Nạp thẻ cào</a>
+                        <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20"
+                            [routerLink]="['/muasp',muasp.id]">Mua ngay</a>
+                        <a class="btn c-btn btn-lg btn-danger c-font-uppercase c-font-bold c-btn-square m-t-20" routerLink="/home">Trang chủ</a>
+                            <a class="btn c-btn btn-lg c-bg-green-4 c-font-white c-font-uppercase c-font-bold c-btn-square m-t-20" routerLink="/napthe">Nạp thẻ cào</a>
                     </div>
                 </div>
             </div>
@@ -54,8 +55,8 @@
             </div>
             <div class="row" style="margin-left: 20px;">
                 <div class="col-sm-3 col-xs-1 c-product-variant">
-                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Tên Nhân Vật:  
-                    <span class="c-font-red"> {{ detail.tenNV }} </span></p>
+                    <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Tên NV:  
+                    <span class="c-font-red"> {{ detail.tennv }} </span></p>
                 </div>
                 <div class="col-sm-3 col-xs-1 c-product-variant">
                     <p class="c-product-meta-label c-product-margin-1 c-font-uppercase c-font-bold">Bậc Rank:  
@@ -79,8 +80,8 @@
         <img src="" class="zoom">
     </p>
     <div class="buy-footer" style="text-align: center">
-            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="login">Mua ngay</a>
-            <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20" href="">Mua ngay</a>
+        <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20"
+                 [routerLink]="['/muasp',muasp.id]">Mua ngay</a>
     </div>
 </div>
 <div class="container m-t-20 ">

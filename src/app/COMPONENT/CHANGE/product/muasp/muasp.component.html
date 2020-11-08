@@ -1,0 +1,76 @@
+<form (ngSubmit)="onSubmit()" class="form-horizontal" style="margin-top: 170px;">
+    <h2 style="text-align: center;"><b>Xác nhận mua tài khoản</b></h2>
+<div style="width: 80%; margin-left: 130px;">
+    <div class="c-content-tab-4 c-opt-3" role="tabpanel">
+        <ul class="nav nav-justified" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#thanhtoan" role="tab" data-toggle="tab" class="c-font-16">Thanh toán</a>
+            </li>
+            <li role="presentation">
+                <a href="#thongtin" role="tab" data-toggle="tab" class="c-font-16">Tài khoản</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="thanhtoan">
+                <ul class="c-tab-items p-t-0 p-b-0 p-l-5 p-r-5">
+                    <li class="c-font-dark">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr >
+                                <th>Thông tin tài khoản #{{ muasp.id }}</th>
+                            </tr>
+                            <tr>
+                                <td>Nhà phát hành: </td>
+                                <th class="text-info">GARENA</th>
+                            </tr>
+                            <tr>
+                                <td>Thể loại: </td>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Giá tiền (vnđ): </td>
+                                <th class="text-info">{{ muasp.giaban}}</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="thongtin">
+                <ul class="c-tab-items p-t-0 p-b-0 p-l-5 p-r-5">
+                    <li class="c-font-dark">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <th>Chi tiết tài khoản #{{ muasp.id }}</th>
+                            </tr>
+                        <tr>
+                            <td style="width:69%">Tên nhân vật: </td>
+                            <td class="text-danger" style="font-weight: 700;">{{ muasp.tennv }}</td>
+                        </tr>
+                         <tr>
+                            <td style="width:45%">Rank: </td>
+                            <td class="text-danger" style="font-weight: 700;">{{ muasp.rank }}</td>
+                        </tr>
+                         <tr>
+                            <td style="width:42%">Skin: </td>
+                            <td class="text-danger" style="font-weight: 700;">{{ muasp.skin }}</td>    
+                         <tr>
+                        </tr>
+                            </tbody>                       
+                         </table>
+                         </li>
+                     </ul>
+                  </div>
+             </div>
+        </div>
+            <!-- <label class="col-md-12 form-control-label text-danger" style="text-align: center;margin: 10px 0; ">
+                Bạn không đủ số dư để mua tài khoản này. Bạn hãy click vào nút nạp thẻ để nạp thêm và mua tài khoản.
+            </label>       -->   
+        <div class="modal-footer">
+            <button type="submit" class="btn c-bg-green-4 c-font-white c-btn-square c-btn-uppercase c-btn-bold">Thanh Toán</button>
+        </div>
+    </div>
+    <div style="clear: both">
+    </div>
+</form>

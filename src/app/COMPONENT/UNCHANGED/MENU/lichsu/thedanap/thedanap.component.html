@@ -1,4 +1,4 @@
-<div class="c-layout-page" style="margin-top:  150px;">
+<div class="c-layout-page" style="margin-top: 170px;">
     <!-- BEGIN: PAGE CONTENT -->
     <div class="container">
     <div class="c-layout-sidebar-menu c-theme ">
@@ -11,8 +11,8 @@
             </div>
             <div class="c-content-ver-nav">
                 <ul class="c-menu c-arrow-dot c-square c-theme">
-                    <li><a href="profile" class="">Thông tin tài khoản</a></li>
-                    <li><a href="doimk" class="" >Đổi mật khẩu</a></li>
+                    <li><a href="profile">Thông tin tài khoản</a></li>
+                    <li><a href="doimk">Đổi mật khẩu</a></li>
             </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="c-layout-sidebar-content ">
     <!-- BEGIN: PAGE CONTENT -->
     <div class="c-content-title-1">
-    <h3 class="c-font-uppercase c-font-bold">Lịch sử mua account</h3>
+    <h3 class="c-font-uppercase c-font-bold">Lịch sử nạp thẻ</h3>
     <div class="c-line-left"></div>
     </div>
     <form class="form-horizontal form-find m-b-20" role="form" method="get">
@@ -50,43 +50,34 @@
     <table class="table table-hover table-custom-res">
     <thead>
         <tr>
-            <th colspan="2"><b>Thời gian:</b></th>
-                <td colspan="2"></td>
-        </tr>
-        <tr>
-            <th><b>ID</b></th>
-            <th><b>Họ Tên</b></th>
-            <th><b>Tài khoản</b></th>
-            <th><b>Mật khẩu</b></th>
-            <th><b>Thể loại</b></th>
-            <th><b>Tên nhân vật</b></th>
-            <th><b>Giá (vnđ)</b></th>
-            <th><b>Trạng Thái</b></th>
+            <th class="hidden-xs">Thời gian</th>
+            <th>Họ tên</th>
+            <th>Nhà mạng</th>
+            <th>Mệnh giá (vnđ)</th>
+            <th>Kết quả</th>
+            <th>Trạng thái</th>
         </tr>
     </thead>
         <tbody>
-            <ng-container *ngFor="let lstt of lichsutt; let i = index">
             <tr>
-                <td>{{ i + 1 }}</td>
-                <td>{{ lstt.idUser }}</td>
+                <td colspan="8"><b>Thời gian</b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>hoten</td>
+                <td>Nhamang</td>
+                <td>Menhgia</td>
                 <td>
-                    <span class="label label-success">{{ lstt.account}}</span>
+                    <span>Ketqua</span>
                 </td>
                 <td>
-                    <span class="label label-success">{{ lstt.password }}</span>
-                    </td>
-                <td>{{ lstt.tentheloai }}</td>
-                <td>{{ lstt.tennv }}</td>
-                <td>{{ lstt.giaban | currency: "VND" }}</td>
-                <td>
-                    <span class="c-font-bold text-success">{{ lstt.trangthai }}</span> 
+                    <span class="c-font-bold text-success">Hoàn tất</span>
                 </td>
             </tr>
-        </ng-container>
-    </tbody>
-</table>
+        </tbody>
+    </table>
     <!-- END: PAGE CONTENT -->
-    <div class="data_paginate paging_bootstrap paginations_custom" style="text-align: center">
-    </div>
-    </div>
-    </div>
+<div class="data_paginate paging_bootstrap paginations_custom" style="text-align: center">
+</div>
+</div>
+</div>

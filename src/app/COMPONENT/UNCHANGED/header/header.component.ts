@@ -8,15 +8,18 @@ import { User } from '../../SINGGUMNOPROXY/models/user';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
+
   HeaderComponent;
   currentUser: User;
-  isLoggedIn$: Observable<User>;
-  constructor(private auth: AuthenticationService) {
+  isLoggedIn: Observable<User>;
+
+  constructor(
+    private auth: AuthenticationService) {
     this.currentUser = this.auth.userValue;
   }
   
   ngOnInit(): void {
-      this.isLoggedIn$ = this.auth.user;
+      this.isLoggedIn = this.auth.user;
   }
   onLogout(){
     this.auth.logout();

@@ -32,6 +32,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
       remember: [''],
     });
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
+    
   }
   get f() {
     return this.loginForm.controls;
@@ -47,10 +48,12 @@ export class LoginComponent extends BaseComponent implements OnInit {
       .subscribe(
         (data) => {
           this.router.navigate([this.returnUrl]);
+          alert("Đănh nhập thành công!!! Welcom")
         },
         (error) => {
           this.error = error;
           this.loading = false; 
+          alert("Sai tên đăng nhập hoặc mật khẩu, nhớ lại đi!!!")
         }
       );
   }
