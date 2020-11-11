@@ -39,14 +39,18 @@ export class NaptheComponent extends BaseComponent implements OnInit {
     }; 
     console.log(napthe);
     this._api.post('api/LichSuNap/create-nap', napthe).takeUntil(this.unsubscribe).subscribe(res => {
+      let tien: number=0;
+      tien=Number.parseInt(this.auth.userValue.sotien.toString()) + Number.parseInt(napthe.menhgia);
+      this.auth.userValue.sotien=tien;
+      let tmp = {
+        id: this.currentUser.id,
+       sotien: this.auth.userValue.sotien}
+      this._api.post('api/Users/update-usermoney',tmp).takeUntil(this.unsubscribe).subscribe(res =>{
+        alert("Nạp thẻ thành công");
+      },
+        err => { });
+        
     });
-    let tmp = {
-      id: this.currentUser.id,
-     sotien: this.currentUser.sotien += napthe.ketqua}
-    this._api.post('api/Users/update-usermoney',tmp).takeUntil(this.unsubscribe).subscribe(res =>{},
-    err => { });
-    alert("Nạp thẻ thành công")
-    console.log(this.currentUser.sotien);
   }
 }
 

@@ -24,12 +24,12 @@
                                 <th class="text-info">GARENA</th>
                             </tr>
                             <tr>
-                                <td>Thể loại: </td>
-                                <th></th>
+                                <td>Thể loại </td>
+                                <th>{{ muasp.id_theloai }}</th>
                             </tr>
                             <tr>
                                 <td>Giá tiền (vnđ): </td>
-                                <th class="text-info">{{ muasp.giaban}}</th>
+                                <th class="text-info">{{ muasp.giaban| currency: "VND" }}</th>
                             </tr>
                             </tbody>
                         </table>
@@ -64,12 +64,9 @@
                   </div>
              </div>
         </div>
-            <!-- <label class="col-md-12 form-control-label text-danger" style="text-align: center;margin: 10px 0; ">
-                Bạn không đủ số dư để mua tài khoản này. Bạn hãy click vào nút nạp thẻ để nạp thêm và mua tài khoản.
-            </label>       -->   
-        <div class="modal-footer">
-            <button type="submit" class="btn c-bg-green-4 c-font-white c-btn-square c-btn-uppercase c-btn-bold">Thanh Toán</button>
-        </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn c-bg-green-4 c-font-white c-btn-square c-btn-uppercase c-btn-bold">Thanh Toán</button>
+            </div>
     </div>
     <div style="clear: both">
     </div>

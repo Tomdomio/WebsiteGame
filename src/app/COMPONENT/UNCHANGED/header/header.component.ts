@@ -10,7 +10,7 @@ import { User } from '../../SINGGUMNOPROXY/models/user';
 export class HeaderComponent implements OnInit {
 
   HeaderComponent;
-  currentUser: User;
+  currentUser: any;
   isLoggedIn: Observable<User>;
 
   constructor(
@@ -23,5 +23,6 @@ export class HeaderComponent implements OnInit {
   }
   onLogout(){
     this.auth.logout();
+    alert('Bạn đã đăng xuất');
   }
 }
