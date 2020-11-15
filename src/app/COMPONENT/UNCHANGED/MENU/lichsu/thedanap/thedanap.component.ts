@@ -8,8 +8,8 @@ import { User } from 'src/app/COMPONENT/SINGGUMNOPROXY/models/user';
   templateUrl: './thedanap.component.html',
 })
 export class ThedanapComponent extends BaseComponent implements OnInit {
-
-  thedanap: any;
+  ThedanapComponent;
+  lichsunap: any;
   currentUser: User;
   
   constructor(injector: Injector,
@@ -19,6 +19,14 @@ export class ThedanapComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.lichsunap = [];
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('api/LichSuNap/get-by-idUser/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.lichsunap = res;
+        console.log(this.lichsunap);
+      }); 
+    });
   }
 
 }

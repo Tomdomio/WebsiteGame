@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { ProductModule } from './COMPONENT/CHANGE/product/product.module';
 import { HomeModule } from './COMPONENT/CHANGE/home/home.module';
@@ -10,10 +11,9 @@ import { PageNotFoundComponent } from './COMPONENT/UNCHANGED/page-not-found/page
 import { HuongdanmuaComponent } from './COMPONENT/UNCHANGED/MENU/huongdanmua/huongdanmua.component';
 import { BaivietComponent } from './COMPONENT/UNCHANGED/MENU/baiviet/baiviet.component';
 import { LichsuComponent } from './COMPONENT/UNCHANGED/MENU/lichsu/lichsu.component';
+import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/thedanap.component';
 import { RegisterComponent } from './COMPONENT/UNCHANGED/MENU/register/register.component';
 import { LoginComponent } from './COMPONENT/UNCHANGED/MENU/login/login.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/thedanap.component';
 
 
 const routesConfig: Routes = [

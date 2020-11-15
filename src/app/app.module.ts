@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PaginatorModule } from 'primeng/paginator';
+import { ScrollingModule}  from '@angular/cdk/scrolling';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FooterComponent } from './COMPONENT/UNCHANGED/footer/footer.component';
 import { HeaderComponent } from './COMPONENT/UNCHANGED/header/header.component';
@@ -27,7 +30,6 @@ import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/th
     RegisterComponent,
     NaptheComponent,
     ThedanapComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,10 @@ import { ThedanapComponent } from './COMPONENT/UNCHANGED/Menu/lichsu/thedanap/th
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PaginatorModule,
+    ScrollingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

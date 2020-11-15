@@ -24,9 +24,9 @@
         <div class="c-content-ver-nav m-b-20">
             <ul class="c-menu c-arrow-dot c-square c-theme">
                 <li><a routerLink="/napthe"><b>Nạp thẻ tự động</b></a></li>
-                <li><a [routerLink]="['/thedanap/',currentUser.id]" class="active">Thẻ cào đã nạp</a></li>
+                <li><a [routerLink]="['/thedanap/',currentUser.id]">Thẻ cào đã nạp</a></li>
                 <li><a [routerLink]="['/dvdamua/',currentUser.id]">Dịch vụ đã mua</a></li>
-                <li><a [routerLink]="['/lichsu/',currentUser.id]">Lịch sử mua account</a></li>
+                <li><a [routerLink]="['/lichsu/',currentUser.id]" class="active">Lịch sử mua account</a></li>
             </ul>
         </div>
     </div>
@@ -68,7 +68,7 @@
             <ng-container *ngFor="let lstt of lichsutt; let i = index">
             <tr>
                 <td>{{ i + 1 }}</td>
-                <td>{{ lstt.idUser }}</td>
+                <td>{{ currentUser.hoten }}</td>
                 <td>
                     <span class="label label-success">{{ lstt.account}}</span>
                 </td>

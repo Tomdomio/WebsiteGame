@@ -50,34 +50,35 @@
     <table class="table table-hover table-custom-res">
     <thead>
         <tr>
-            <th class="hidden-xs">Thời gian</th>
+            <th>STT</th>
             <th>Họ tên</th>
             <th>Nhà mạng</th>
+            <th>Số Seri</th>
+            <th>Mã thẻ</th>
             <th>Mệnh giá (vnđ)</th>
             <th>Kết quả</th>
             <th>Trạng thái</th>
         </tr>
     </thead>
         <tbody>
+        <ng-container *ngFor="let lsn of lichsunap; let i = index">
             <tr>
-                <td colspan="8"><b>Thời gian</b></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>hoten</td>
-                <td>Nhamang</td>
-                <td>Menhgia</td>
+                <td>{{ i + 1 }}</td>
+                <td>{{ currentUser.hoten }}</td>
+                <td>{{ lsn.nhamang }}</td>
+                <td>{{ lsn.soseri }}</td>
+                <td>{{ lsn.mathe }}</td>
+                <td>{{ lsn.menhgia | currency:"VND" }}</td>
                 <td>
-                    <span>Ketqua</span>
+                    <span>{{ lsn.ketqua | currency:"VND" }}</span>
                 </td>
                 <td>
                     <span class="c-font-bold text-success">Hoàn tất</span>
                 </td>
             </tr>
+        </ng-container>
         </tbody>
     </table>
     <!-- END: PAGE CONTENT -->
-<div class="data_paginate paging_bootstrap paginations_custom" style="text-align: center">
-</div>
 </div>
 </div>
