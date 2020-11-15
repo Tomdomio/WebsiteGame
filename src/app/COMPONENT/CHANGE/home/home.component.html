@@ -8,16 +8,6 @@
             <img src="assets/assets/images/Cover.gif">
           </a>
         </div>
-        <div class="item">
-          <a routerLink="/home">
-            <img src="assets/assets/images/banner1.jpg">
-          </a>
-        </div>
-        <div class="item">
-          <a routerLink="/home">
-            <img src="assets/assets/images/banner2.png">
-          </a>
-        </div>
       </div>
     </div>
 	<div class="c-content-box c-size-md c-bg-white">
@@ -65,7 +55,7 @@
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
-								<a routerLink="/product"><img src="assets/assets/images/{{ loai.image }}"></a>
+								<a routerLink="/product"><img src="{{ loai.image }}"></a>
 							</div>
 							<div class="news_title">
 								<h2>
@@ -112,9 +102,9 @@
 					<div class="col-sm-3 col-xs-6 p-5">
 						<div class="classWithPad">
 							<div class="news_image">
-								<a href=""><img src="assets/assets/images/{{ dv.image }}"></a>
+								<a href=""><img src="{{ dv.image }}"></a>
 							</div>
-							<div class="news_title"><a href="">{{ dv.tenDichVu }}</a></div>
+							<div class="news_title"><a href="">{{ dv.tendichvu }}</a></div>
 							<div class="news_description">
 								<p>
 									Dịch vụ hỗ trợ: 3

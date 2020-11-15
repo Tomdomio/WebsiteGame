@@ -13,7 +13,7 @@
             </div>
             <div class="col-sm-12 visible-sm visible-xs visible-sm">
                 <div class="text-center m-t-20">
-                    <img class="img-relqonsive img-thumbnail" src=" source/images/NSO/fPLeKbwarL_1583588570.jpg"/>
+                    <img class="img-relqonsive img-thumbnail" src=" {{ detail.image }}"/>
                 </div>
                 <div class="c-product-meta">
                     <div class="c-content-divider">
@@ -76,9 +76,11 @@
     </div>
 </div>
 <div class="container m-t-20 content_post">
-    <p>
-        <img src="" class="zoom">
-    </p>
+    <ng-container *ngFor="let img of images">
+        <p>
+            <img src="{{ img.image }}" class="zoom">
+        </p>
+    </ng-container> 
     <div class="buy-footer" style="text-align: center">
         <a class="btn c-btn btn-lg c-theme-btn c-font-uppercase c-font-bold c-btn-square m-t-20"
                  [routerLink]="['/muasp',muasp.id]">Mua ngay</a>

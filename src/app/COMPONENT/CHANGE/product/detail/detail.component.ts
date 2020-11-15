@@ -11,6 +11,7 @@ export class DetailComponent extends BaseComponent implements OnInit {
 
   detail: any;
   muasp: any;
+  images: any;
   constructor(injector: Injector) {
     super(injector);
   }
@@ -28,6 +29,14 @@ export class DetailComponent extends BaseComponent implements OnInit {
       let id = params['id'];
       this._api.get('api/SanPham/get-by-id/'+id).takeUntil(this.unsubscribe).subscribe(res => { this.muasp = res;
         setTimeout(() => { this.loadScripts();});
+      });
+    });
+    this.images = [];
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('api/ImageSP/get-by-sp/'+id).takeUntil(this.unsubscribe).subscribe(res => { this.images = res;
+        setTimeout(() => { this.loadScripts();});
+        console.log(this.images);
       });
     });
   }
